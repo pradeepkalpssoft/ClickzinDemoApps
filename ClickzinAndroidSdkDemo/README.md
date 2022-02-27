@@ -61,7 +61,8 @@ repository 'Google' was added by build file 'build.gradle' in settings.gradle,
 
     // Step 5 : Clickzin changes starts here
     private fun startTracking() {
-        ClickzinTracker.getInstance().init(applicationContext, "jumpon", null)
+        val appKey = "As provided by your Digital Marketing team."
+        ClickzinTracker.getInstance().init(applicationContext, appKey, null)
         ClickzinTracker.getInstance().setCustomerId("pradeep")
         ClickzinTracker.getInstance().startTracking("install")
     }
