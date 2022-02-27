@@ -4,7 +4,7 @@ Clickzin Demo apps SDK
 
 # Step 1 : Add maven in root directory build.gradle or in settings.gradle(for latest project structure)
 
-    `allprojects { 
+    allprojects { 
         repositories { 
             google()
             // Clickzin App Changes starts here
@@ -13,21 +13,19 @@ Clickzin Demo apps SDK
             }
             // Clickzin App Changes starts here
         }
-    }`
+    }
 
-    On facing below errors,
-    Error : Build was configured to prefer settings repositories over project repositories but
-    repository 'Google' was added by build file 'build.gradle' in settings.gradle,
+On facing below errors,
+Error : Build was configured to prefer settings repositories over project repositories but
+repository 'Google' was added by build file 'build.gradle' in settings.gradle,
     
     change `repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)`
     to `repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)`
 
 # Step 2 : In app build.gradle under dependencies add 
 `
-    // Clickzin app Changes starts here
     implementation 'com.clickzin.tracking:clickzinTracking:7.0.1'
     implementation 'com.google.code.gson:gson:2.8.6'
-    // Clickzin app Changes ends here
 `
 # Step 3: In AndroidManifest.xml,add below permissions if not added.
     <!--    Clickzin changes starts here-->
