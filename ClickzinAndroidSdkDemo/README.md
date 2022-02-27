@@ -23,10 +23,10 @@ repository 'Google' was added by build file 'build.gradle' in settings.gradle,
     to `repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)`
 
 # Step 2 : In app build.gradle under dependencies add 
-`
+
     implementation 'com.clickzin.tracking:clickzinTracking:7.0.1'
     implementation 'com.google.code.gson:gson:2.8.6'
-`
+
 # Step 3: In AndroidManifest.xml,add below permissions if not added.
     <!--    Clickzin changes starts here-->
 
@@ -37,8 +37,7 @@ repository 'Google' was added by build file 'build.gradle' in settings.gradle,
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!--    Clickzin changes ends here-->
 
-# Step 4: In AndroidManifest.xml, add below android receiver component as first component inside 
-# application TAG
+# Step 4: In AndroidManifest.xml, add below android receiver component as first component inside application TAG
 
     <!--    Clickzin changes starts here  -->
         <receiver
@@ -50,16 +49,7 @@ repository 'Google' was added by build file 'build.gradle' in settings.gradle,
         </receiver>
     <!--    Clickzin changes starts here  -->
 
-# Step 5: In first activity of your application, add below function startTracking and call this
-# function in onCreate().
-
-    // Step 5 : Clickzin changes starts here
-    private fun startTracking() {
-        ClickzinTracker.getInstance().init(applicationContext, "jumpon", null)
-        ClickzinTracker.getInstance().setCustomerId("pradeep")
-        ClickzinTracker.getInstance().startTracking("install")
-    }
-    // Step 5 : Clickzin changes ends starts here
+# Step 5: In first activity of your application, add below function startTracking and call this  function in onCreate().
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -68,6 +58,14 @@ repository 'Google' was added by build file 'build.gradle' in settings.gradle,
             startTracking()
             // Step 5 : Clickzin changes ends starts here
     }
+
+    // Step 5 : Clickzin changes starts here
+    private fun startTracking() {
+        ClickzinTracker.getInstance().init(applicationContext, "jumpon", null)
+        ClickzinTracker.getInstance().setCustomerId("pradeep")
+        ClickzinTracker.getInstance().startTracking("install")
+    }
+    // Step 5 : Clickzin changes ends starts here
 
 # Step 6: To track any specific events,
     // Step 6 : Clickzin changes starts here
