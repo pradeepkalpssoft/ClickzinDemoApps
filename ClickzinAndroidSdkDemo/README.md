@@ -4,16 +4,16 @@ Clickzin Demo apps SDK
 
 # Step 1 : Add maven in root directory build.gradle or in settings.gradle(for latest project structure)
 
-`allprojects { 
-    repositories { 
-        google()
-        // Clickzin App Changes starts here
-        maven { 
-            url "https://mymavenrepo.com/repo/gap8CjauTS8VrUs57tgf/"
+    `allprojects { 
+        repositories { 
+            google()
+            // Clickzin App Changes starts here
+            maven { 
+                url "https://mymavenrepo.com/repo/gap8CjauTS8VrUs57tgf/"
+            }
+            // Clickzin App Changes starts here
         }
-        // Clickzin App Changes starts here
-    }
-}`
+    }`
 
 On facing below errors,
 Error : Build was configured to prefer settings repositories over project repositories but
