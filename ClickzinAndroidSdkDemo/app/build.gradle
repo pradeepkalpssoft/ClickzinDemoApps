@@ -42,7 +42,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 
     // Clickzin app Changes starts here
-    implementation 'com.clickzin.tracking:clickzinTracking:7.0.1'
+    implementation 'com.clickzin.tracking:clickzinTracking:7.0.3'
     implementation 'com.google.code.gson:gson:2.8.6'
     // Clickzin app Changes ends here
 }

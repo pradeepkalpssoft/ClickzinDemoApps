@@ -24,7 +24,7 @@ repository 'Google' was added by build file 'build.gradle' in settings.gradle,
 
 # Step 2 : In app build.gradle under dependencies add 
 
-    implementation 'com.clickzin.tracking:clickzinTracking:7.0.1'
+    implementation 'com.clickzin.tracking:clickzinTracking:7.0.3'
     implementation 'com.google.code.gson:gson:2.8.6'
 
 # Step 3: In AndroidManifest.xml,add below permissions if not added.
